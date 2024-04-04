@@ -11,6 +11,7 @@
     <div id="app"></div>
 
     <script>
+        // model
         const model = {
             app: {
                 currentPage: null,
@@ -20,6 +21,9 @@
                 goToPage: null,
             },
         };
+
+        // view
+        updateView();
         function updateView() {
             document.getElementById('app').innerHTML = /*HTML*/`
                 <h1>${model.currentPage}</h1>
@@ -34,9 +38,26 @@
                 </table>
             `;
         }
+
+        function createHistoryEntriesHtml(){
+            let html = '';
+            for(let historyEntry of model.history){
+                html += /*HTML*/`
+                    <tr>
+                        <td>
+                            ${historyEntry.pageName} 
+                            ${new Date(historyEntry.timeStamp).toLocaleTimeString()} 
+                        </td>
+                    </tr>
+                `;
+            }
+            return html;
+        }
+
+        // controller
         function goToPage()
         {
-            
+
         }
     </script>
 </body>
