@@ -12,7 +12,7 @@
     </style>
 </head>
 
-<body>
+<body onhashchange="hashChanged()">
     <div id="app"></div>
 
     <script>
@@ -33,10 +33,10 @@
             const page = model.app.currentPage ?? 'main';
             document.getElementById('app').innerHTML = /*HTML*/`
                 <h1>${page}</h1>
-                <a href="javascript:goToPage(null)">Main</a>
-                <a href="javascript:goToPage('A')">A</a>
-                <a href="javascript:goToPage('B')">B</a>
-                <a href="javascript:goToPage('C')">C</a>
+                <a href="#">Main</a>
+                <a href="#A">A</a>
+                <a href="#B">B</a>
+                <a href="#C">C</a>
                 <table>
                     ${createHistoryEntriesHtml()}
                 </table>
@@ -61,6 +61,12 @@
         }
 
         // controller
+        function hashChanged(){
+            const hash = location.hash.substr(1);
+            const page = hash.length == 0 ? null : hash;
+            goToPage(page);
+        }
+
         function goToPage(page) {
             model.app.currentPage = page;
             const timeStamp = new Date().getTime();
