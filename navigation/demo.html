@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        const model = {
+            app: {
+                currentPage: null,
+                history: [],
+            },
+            inputs: {
+                goToPage: null,
+            },
+        };
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <h1>${model.currentPage}</h1>
+                <input 
+                    type="text" 
+                    oninput="model.inputs.goToPage=this.value"
+                    value="${model.inputs.goToPage ?? ''}"
+                    />
+                <button onclick="goToPage()">Naviger</button>
+                <table>
+                    ${createHistoryEntriesHtml()}
+                </table>
+            `;
+        }
+        function goToPage()
+        {
+            
+        }
+    </script>
+</body>
+
+</html>
