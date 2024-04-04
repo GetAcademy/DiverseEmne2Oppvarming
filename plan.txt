@@ -1,0 +1,13 @@
+1: Nytt eksempel med modell, oppdeling i sider
+     a: logge inn
+     b: vise alle personer
+     c: bestille parprogrammering
+     d: vis alle parprogrammeringer
+     e: legge til kommentar på parprogrammering
+   Snakke om
+    - begynne med alt i én fil - så dele opp
+    - en overordnet updateView + en for hver sider
+    - finne et objekt i en liste ut fra id
+    - hjelpefunksjoner (= enkle komponenter) for å trekke ut 
+      produksjon av en bestemt type html + gjenbruk
+2: navigasjon med hash (vi tar en kopi av applikasjonen fra punkt 1)

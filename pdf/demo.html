@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generer PDF i JavaScript</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <button onclick="createPdf()">Last ned PDF</button>
+    <a href="https://rawgit.com/MrRio/jsPDF/master/docs/index.html">rawgit.com/MrRio/jsPDF/master/docs/index.html</a>
+    <script>
+        function createPdf() {
+            const doc = new jspdf.jsPDF();
+            doc.text("Hei, dette er en PDF generert i JavaScript!", 10, 10);
+            doc.addImage("terje.jpg", "JPEG", 15, 40, 180, 180);
+            doc.save("min_genererte_pdf.pdf");
+        }
+    </script>
+</body>
+
+</html>
