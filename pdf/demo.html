@@ -13,7 +13,7 @@
     <script>
         function createPdf() {
             const doc = new jspdf.jsPDF();
-            doc.text("Hei, dette er en PDF generert i JavaScript!", 10, 10);
+            doc.text("Hei, dette er 😄 en PDF generert i JavaScript!", 10, 10);
             doc.addImage("terje.jpg", "JPEG", 15, 40, 180, 180);
             doc.save("min_genererte_pdf.pdf");
         }
