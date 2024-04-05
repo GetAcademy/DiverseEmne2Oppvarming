@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="js/model.js"></script>
+    <script src="js/orderSessionController.js"></script>
 </head>
-<body>
 
+<body>
+    <div id="app"></div>
+    <script>
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <h1>Parprogrammering</h1>
+                <b>Tidspunkt</b><br/>
+                <input 
+                    type="datetime-local"
+                    oninput="model.inputs.orderSession.dateAndTime=this.value"
+                    value="${model.inputs.orderSession.dateAndTime ?? ''}"
+                    /><br/>
+                ${createUsersHtml()}<br/>
+            `;
+        }
+
+        function createUsersHtml() {
+            let usersHtml = '';
+            for (let user of model.data.users) {
+                if (user.id != model.app.user) {
+                    usersHtml += /*HTML*/`
+                    <button onclick="invite('${user.id}')">Inviter 
+                        ${user.id}
+                    </button>
+                `;
+                }
+            }
+            return usersHtml;
+        }
+
+
+    </script>
 </body>
+
 </html>

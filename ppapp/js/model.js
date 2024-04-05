@@ -1,11 +1,12 @@
 const model = {
     app: {
         user: 'terje',
+        page: null,
     },
     inputs: {
         orderSession: {
             otherUserId: 'per',
-            dateAndTime: '2024-04-05 12:00',
+            dateAndTime: null,
         },
         feedback: {
             session: 1,
@@ -20,11 +21,11 @@ const model = {
             {id: 'espen', password: 'e'},
         ],
         sessions: [
-            { id: 1, idA: 'terje', idB: 'per', dateAndTime: '2024-04-05 12:00', 
+            { id: 1, userIdA: 'terje', userIdB: 'per', dateAndTime: '2024-04-05 12:00', 
                 commentA: 'Bra økt, snakkes på torsdag',
                 commentB: '',
             },
-            { id: 2, idA: 'pål', idB: 'espen', dateAndTime: '2024-04-05 12:00'},         
+            { id: 2, userIdA: 'pål', userIdB: 'espen', dateAndTime: '2024-04-05 12:00'},         
         ],
     }
 };
