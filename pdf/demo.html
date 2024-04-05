@@ -14,9 +14,8 @@
         function createPdf() {
             const doc = new jspdf.jsPDF();
             doc.text("Hei, dette er <b>kgjk</b> en PDF generert i JavaScript!", 10, 10);
-            // doc.addImage("content.svg", "SVG", 15, 40, 180, 180);
-            // doc.addImage("terje.jpg", "JPEG", 15, 40, 180, 180);
-            doc.addSvg(mySvg, 20, 20, 200, 200);
+            doc.addImage("terje.jpg", "JPEG", 15, 40, 180, 180);
+            // doc.addSvg(mySvg, 20, 20, 200, 200);
             doc.save("min_genererte_pdf.pdf");
         }
 
