@@ -1,4 +1,4 @@
-1: Nytt eksempel med modell, oppdeling i sider
+1: Nytt eksempel med modell, oppdeling i sider - PPAPP
      a: logge inn
      b: vise alle personer
      c: bestille parprogrammering
@@ -11,3 +11,6 @@
     - hjelpefunksjoner (= enkle komponenter) for å trekke ut 
       produksjon av en bestemt type html + gjenbruk
 2: navigasjon med hash (vi tar en kopi av applikasjonen fra punkt 1)
+3: pdf
+
+Kom gjerne med innspill til neste økt (tirsdag kl. 10.00)
