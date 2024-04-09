@@ -10,6 +10,13 @@
     <script src="js/orderSessionView.js"></script>
     <script src="js/showSessionsController.js"></script>
     <script src="js/showSessionsView.js"></script>
+    <script src="js/loginController.js"></script>
+    <script src="js/loginView.js"></script>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,11 +24,10 @@
     <script>
         updateView();
         function updateView() {
-            if (model.app.page == null || model.app.page == 'orderSession') {
-                updateViewOrderSession();
-            } else if(model.app.page == 'showSessions'){
-                updateViewShowSessions();
-            }
+            const page = model.app.page
+            if (page == null) updateViewLogin();
+            else if (page == 'orderSession') updateViewOrderSession();
+            else if (page == 'showSessions') updateViewShowSessions();
         }        
     </script>
 </body>

@@ -1,6 +1,6 @@
 const model = {
     app: {
-        user: 'terje',
+        user: null,
         page: null,
     },
     inputs: {
@@ -11,7 +11,12 @@ const model = {
         feedback: {
             session: 1,
             comment: 'Bra økt, snakkes på torsdag',
-        }
+        }, 
+        login: {
+            userId: null,
+            password: null,
+            errorMessage: null,
+        },
     },
     data: {
         users: [
