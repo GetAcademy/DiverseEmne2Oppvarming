@@ -6,7 +6,7 @@ function invite(userId) {
         dateAndTime: model.inputs.orderSession.dateAndTime,
     };
     model.data.sessions.push(session);
-    model.app.page = 'showSessions';
+    model.app.page = 'main';
     updateView();
 }
 

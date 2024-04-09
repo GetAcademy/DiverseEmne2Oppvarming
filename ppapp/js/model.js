@@ -1,7 +1,7 @@
 const model = {
     app: {
-        user: null,
-        page: null,
+        user: 'terje',
+        page: 'main',
     },
     inputs: {
         orderSession: {
@@ -17,6 +17,9 @@ const model = {
             password: null,
             errorMessage: null,
         },
+        main: {
+            sessionId: null,
+        },
     },
     data: {
         users: [
@@ -29,6 +32,7 @@ const model = {
             { id: 1, userIdA: 'terje', userIdB: 'per', dateAndTime: '2024-04-05 12:00', 
                 commentA: 'Bra økt, snakkes på torsdag',
                 commentB: '',
+                rating: 4,
             },
             { id: 2, userIdA: 'pål', userIdB: 'espen', dateAndTime: '2024-04-05 12:00'},         
         ],

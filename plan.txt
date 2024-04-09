@@ -1,3 +1,9 @@
+- velge en sesjon
+- vise den lenger ned på siden
+- legge til rating
+- vise alternativ kode med filter og map
+
+
 tirsdag
 
  - innlogging

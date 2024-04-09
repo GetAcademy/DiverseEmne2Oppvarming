@@ -1,14 +1,16 @@
-// Pauset til 10:35
-
 function login() {
     let userId = findUser();
+    const login = model.inputs.login;
     if (userId == null) {
-
+        login.errorMessage = 'Feil brukernavn og/eller passord';
     } else {
-        model.app.page = 'orderSession';
+        model.app.page = 'main';
         model.app.user = userId;
-        updateView();
+        login.errorMessage = null;
+        login.userId = null;
+        login.password = null;
     }
+    updateView();
 }
 
 function findUser() {

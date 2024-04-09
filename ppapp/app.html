@@ -12,9 +12,19 @@
     <script src="js/showSessionsView.js"></script>
     <script src="js/loginController.js"></script>
     <script src="js/loginView.js"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/mainView.js"></script>
+    <script src="js/commonController.js"></script>
     <style>
-        .error{
+        .error {
             color: red;
+        }
+
+        .stars {
+            color: gold;
+            font-size: 200%;
+            cursor: pointer;
+            user-select: none;
         }
     </style>
 </head>
@@ -26,6 +36,7 @@
         function updateView() {
             const page = model.app.page
             if (page == null) updateViewLogin();
+            else if (page == 'main') updateViewMain();
             else if (page == 'orderSession') updateViewOrderSession();
             else if (page == 'showSessions') updateViewShowSessions();
         }        
