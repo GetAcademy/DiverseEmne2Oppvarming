@@ -1,3 +1,13 @@
+tirsdag
+
+ - "rate" parprogrammeringsøkt og legge til kommentar
+ - innlogging
+ - adminbruker som kan filtrere og se alle oppsatte par og dato, se resultatene på rating, lese kommentarene eller noe. 
+ - Gjerne mer av relasjoner mellom arrays - 
+ - array funksjons, filter, map, reduce sånne type tips og triks!
+
+--- 
+
 1: Nytt eksempel med modell, oppdeling i sider - PPAPP
      a: logge inn
      b: vise alle personer
