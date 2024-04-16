@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let videoIndex = 0;
+        const videos = 
+        [
+            '39VdEzvkCZY',
+            'hyGbp78pGqY',
+            'WqXgl8EZzcs',
+        ];
+
+        // view
+        updateView();
+        function updateView() {
+            const id = videos[videoIndex];
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <h1>Min videoapp</h1>
+                <iframe 
+                    width="280" 
+                    height="157" 
+                    src="https://www.youtube.com/embed/${id}" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <br/>
+                <button onclick="move(-1)">&lt;</button>
+                <button onclick="move(1)">&gt;</button>            
+            `;
+        }
+
+        // controller
+        function move(change){
+            videoIndex += change;
+            updateView();
+        }
+
+    </script>
+</body>
+
+</html>

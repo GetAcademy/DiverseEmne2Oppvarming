@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #app{
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 100px auto;
+            grid-template-rows: 40px auto 40px;
+            grid-template-areas: 
+                "header header"                
+                "menu content"
+                "menu footer"
+            ;
+        }
+
+        #app > div {
+            border: 1px solid gray;
+        }
+
+        .content{
+            grid-area: content;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        1: Bare oppdatere deler av en nettside, typ du har en ramme eller 
+        en footer og header og bare innholdet mellom dem skal oppdateres
+    -->
+    <div id="app">
+    </div>
+    <script>
+        // model
+
+        // view
+        updateView();
+        function updateView() {
+            const text = 'Terje '.repeat(1000);
+            document.getElementById('app').innerHTML = /*HTML*/`
+                ${createHeaderHtml()}
+                <div style="grid-area: menu">Meny</div>
+                <div class="content">Innhold
+                    <p>
+                        ${text}
+                    </p>    
+                </div>
+                <div style="grid-area: footer">Footer</div>
+            `;            
+        }
+
+        function createHeaderHtml(){
+            return /*HTML*/`<div style="grid-area: header">Header</div>`;
+        }
+
+        // controller
+
+    </script>
+</body>
+
+</html>

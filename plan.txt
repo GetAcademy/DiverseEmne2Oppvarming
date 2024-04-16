@@ -3,15 +3,15 @@ tirsdag 16.4
 1: Bare oppdatere deler av en nettside, typ du har en ramme eller 
    en footer og header og bare innholdet mellom dem skal oppdateres
 
-2 Hvordan en venneliste fungerer i modellen. Hvordan de kan kobles opp med ID. 
+2: Laste opp og displaye video (eller fil generelt).
+
+3: Hvordan en venneliste fungerer i modellen. Hvordan de kan kobles opp med ID. 
    Lagre og vise venner. Hvordan chatte med venner. 
 
-3: Laste opp og displaye video (eller fil generelt).
 
 4: Kategorisere produkter f.eks, vise bare produkter som har en bestemt kategori i et view
 
-Hvordan man bygger opp en "function" fra scratch.  iaf. 1 som tar for seg med for loop og andre som er mer generelle. trenger man altid return i slutten ?
-Forenkle funksjoner og minske repetisjon
+5: Forenkle funksjoner og minske repetisjon
 
 --
 
