@@ -4,10 +4,11 @@ tirsdag 16.4
    en footer og header og bare innholdet mellom dem skal oppdateres
 
 2: Laste opp og displaye video (eller fil generelt).
+https://www.w3schools.com/html/html5_video.asp
+https://www.w3schools.com/howto/howto_html_download_link.asp
 
 3: Hvordan en venneliste fungerer i modellen. Hvordan de kan kobles opp med ID. 
    Lagre og vise venner. Hvordan chatte med venner. 
-
 
 4: Kategorisere produkter f.eks, vise bare produkter som har en bestemt kategori i et view
 

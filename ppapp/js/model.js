@@ -1,7 +1,7 @@
 const model = {
     app: {
         user: 'terje',
-        page: 'main',
+        page: 'profile',
     },
     inputs: {
         orderSession: {
@@ -22,6 +22,12 @@ const model = {
         },
     },
     data: {
+        friendships: [
+            {user1: 'per', user2: 'pål', since: '2020-01-01'},
+            {user1: 'per', user2: 'espen', since: '2020-01-01'},
+            {user1: 'per', user2: 'terje', since: '2020-01-01'},
+            {user1: 'terje', user2: 'espen', since: '2020-01-01'},
+        ],
         users: [
             {id: 'terje', password: 't'},
             {id: 'per', password: 'p'},
