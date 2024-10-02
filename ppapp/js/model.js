@@ -20,8 +20,17 @@ const model = {
         main: {
             sessionId: null,
         },
+        profile: {
+            user: 'per',
+        },
     },
     data: {
+        messages: [
+            {fromUser: 'per', toUser: 'terje', timeStamp: '2020-01-01 11:53:20', text: 'Hallo'},
+            {fromUser: 'terje', toUser: 'per', timeStamp: '2020-01-01 11:53:30', text: 'Hallo'},
+            {fromUser: 'per', toUser: 'terje', timeStamp: '2020-01-01 11:53:40', text: 'Hvordan står det til?'},
+            {fromUser: 'espen', toUser: 'terje', timeStamp: '2020-01-01 11:53:40', text: 'Espen!'},
+        ],
         friendships: [
             {user1: 'per', user2: 'pål', since: '2020-01-01'},
             {user1: 'per', user2: 'espen', since: '2020-01-01'},
